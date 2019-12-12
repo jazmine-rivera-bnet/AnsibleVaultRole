@@ -1,8 +1,7 @@
-storage "s3" {
-  access_key = "ACCESS_KEY_HERE"
-  secret_key = "SECRET_KEY_HERE"
-  bucket     = "vault-secret"
-  region	 = "us-east-2"
+storage "gcs" {
+  GOOGLE_APPLICATION_CREDENTIALS = "/home/ansible/.ssh/terraform-252815-3f0c5fac9953.json"
+  bucket     = "liveops-vault-data"
+  chunk_size = "512"
 }
 
 listener "tcp" {
